@@ -8,21 +8,30 @@ var choice0 = document.querySelector("#choice0");
 var choice1 = document.querySelector("#choice1");
 var choice2 = document.querySelector("#choice2");
 var choice3 = document.querySelector("#choice3");
+var btn0 = document.querySelector("#btn0");
+var btn1 = document.querySelector("#btn1");
+var btn2 = document.querySelector("#btn2");
+var btn3 = document.querySelector("#btn3");
 
 var wrongAnswer = "Wrong";
 var correctAnswer = "Correct";
 
 startQuizBtn.addEventListener("click", startQuiz);
-choice0.addEventListener("click", checkAnswer);
-choice1.addEventListener("click", checkAnswer);
-choice2.addEventListener("click", checkAnswer);
-choice3.addEventListener("click", checkAnswer);
+btn0.addEventListener("click", checkAnswer);
+btn1.addEventListener("click", checkAnswer);
+btn2.addEventListener("click", checkAnswer);
+btn3.addEventListener("click", checkAnswer);
 
 var questions = [
     {
         question: "What is 1 + 1",
         choices: ["1", "2", "3", "4"],
         answer: "2",
+    }
+    {
+        question: "What is 2 + 2",
+        choices: ["1", "2", "3", "4"],
+        answer: "4",
     }
 ]
 
