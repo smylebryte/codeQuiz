@@ -27,11 +27,16 @@ var questions = [
         question: "What is 1 + 1",
         choices: ["1", "2", "3", "4"],
         answer: "2",
-    }
+    },
     {
         question: "What is 2 + 2",
         choices: ["1", "2", "3", "4"],
         answer: "4",
+    },
+    {
+        question: "What is 3 + 3",
+        choices: ["3", "4", "5", "6"],
+        answer: "6",
     }
 ]
 
