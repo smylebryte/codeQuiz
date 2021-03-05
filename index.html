@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <header>
+        <h3>View Highscores</h3>
+        <h3>Time: <span id="timer"></span></h3>
+    </header>
     <div id="quizContainer">
         <div id="homePage">    
             <h1>Coding Quiz Challenge</h1>
@@ -25,7 +29,13 @@
             </div>
             <hr>
             <div id="answersDiv"></div>
-        </div>    
+        </div> 
+        <div id="endPage" class="hidden">
+            <h1>All Done!</h1>
+            <p>Your final score is <span id="finalScore"></span></p>
+            <label for"initials">Enter your initials:</label>
+            <input type="text" id="initials">
+        </div>
     </div>
 
 

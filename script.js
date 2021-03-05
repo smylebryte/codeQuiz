@@ -1,5 +1,6 @@
 var startQuizBtn = document.querySelector("#startQuizBtn");
 var homePage = document.querySelector("#homePage");
+var endPage = document.querySelector("#endPage");
 var questionsDiv = document.querySelector("#questionsDiv");
 var quizDiv = document.querySelector("#quizDiv");
 var question = document.querySelector("#question");
@@ -18,8 +19,8 @@ var currentIndex = 0;
 
 var wrongAnswer = "Wrong";
 var correctAnswer = "Correct";
-var valueFromBtn = "2";
-var currentQuestion = questions[0];
+// var valueFromBtn = "2";
+// var currentQuestion = questions[0];
 
 startQuizBtn.addEventListener("click", startQuiz);
 btn0.addEventListener("click", checkAnswer);
@@ -31,7 +32,6 @@ var questions = [
     {
         question: "What is 1 + 1",
         choices: ["1", "2", "3", "4"],
-        value: [0, 1, 2, 3],
         answer: "2",
     },
     {
@@ -59,19 +59,31 @@ function displayQuestion () {
     choice1.textContent = questions[currentIndex].choices[1];
     choice2.textContent = questions[currentIndex].choices[2];
     choice3.textContent = questions[currentIndex].choices[3];
+    if (currentIndex > questions.length) {
+        endPage.removeAttribute("class");
+    }
     }
 
 function checkAnswer () {
-    alert ("Hey!");
-    btn0 = questions[currentIndex].value[0];
-    for (let i=0; i < questions.choices.length; i++) {
-        if (valueFromBtn === currentQuestion.answer) {
-            answersDiv.textContent = "Correct!"
-        } else {
-            answersDiv.textContent = "Wrong"
-        }
+    // alert ("Hey!");
+    // btn0 = questions[currentIndex].value[0];
+    // for (let i=0; i < questions.choices.length; i++) {
+    //     if (valueFromBtn === currentQuestion.answer) {
+    //         answersDiv.textContent = "Correct!"
+    //     } else {
+    //         answersDiv.textContent = "Wrong"
+    if (choice0 == questions[currentIndex].answer) {
+        answersDiv.textContent = "Correct!";
+    } else if (choice1 == questions[currentIndex].answer) {
+        answersDiv.textContent = "Correct!";
+    } else if (choice2 == questions[currentIndex].answer) {
+        answersDiv.textContent = "Correct!";
+    } else if (choice3 == questions[currentIndex].answer) {
+        answersDiv.textContent = "Correct!";
+    } else {
+        answersDiv.textContent = "Incorrect";
     }
-
-
-
+    currentIndex++;
+    answersDiv = "";
+    displayQuestion();
 }
